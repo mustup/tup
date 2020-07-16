@@ -2,9 +2,6 @@ import setuptools
 
 
 packages = setuptools.find_namespace_packages(
-    include=[
-        'mustup.*',
-    ],
 )
 
 setuptools.setup(
