@@ -1,6 +1,9 @@
 import ctypes
 import logging
+import os
 import sys
+
+import mustup.tup.errors
 
 logger = logging.getLogger(
     __name__,
@@ -8,6 +11,23 @@ logger = logging.getLogger(
 
 
 def load(
+        ):
+    try:
+        vardict_path = os.environ['tup_vardict']
+    except KeyError:
+        e = mustup.tup.errors.NotUnderTup(
+        )
+
+        raise e
+    else:
+        vardict = load_from_path(
+            path=path,
+        )
+
+        return path
+
+
+def load_from_path(
             path,
         ):
     config_variables = {
