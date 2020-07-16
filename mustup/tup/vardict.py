@@ -24,7 +24,7 @@ def load(
             path=vardict_path,
         )
 
-        return path
+        return vardict
 
 
 def load_from_path(
