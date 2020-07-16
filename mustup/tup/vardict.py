@@ -21,7 +21,7 @@ def load(
         raise e
     else:
         vardict = load_from_path(
-            path=path,
+            path=vardict_path,
         )
 
         return path
